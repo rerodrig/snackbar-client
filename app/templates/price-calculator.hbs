@@ -1,0 +1,33 @@
+<h2>Price Calculator</h2>
+
+<div class="bs-example" data-example-id="list-group-custom-content">
+  <div class="list-group">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Price</td>
+          <td>Quantity</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |i|}}
+        <tr>
+          <td>{{i.name}}</td>
+          <td>{{i.price}}</td>
+          <td><input type="number"/></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+  </div>
+
+  <footer class="col-md-12 text-right">
+    <label for="total">Total</label>
+    <input type="text" disabled="true"/>
+    <button type="button" class="btn btn-primary">Calculate</button>
+  </footer>
+
+</div>

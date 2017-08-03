@@ -10,6 +10,12 @@ Router.map(function() {
   this.route('product', function() {
     this.route('list');
   });
+
+  this.route('ingredient', function() {
+    this.route('list');
+  });
+
+  this.route('price-calculator');
 });
 
 export default Router;

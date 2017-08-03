@@ -1,0 +1,12 @@
+<h2>Ingredients</h2>
+
+<div class="bs-example" data-example-id="list-group-custom-content">
+  <div class="list-group">
+  {{#each model as |i|}}
+		<a href="#" class="list-group-item">
+			<h4 class="list-group-item-heading">{{i.name}}</h4>
+      <p class="list-group-item-text">{{i.price}}</p>
+		</a>
+	{{/each}}
+	</div>
+</div>
