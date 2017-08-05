@@ -16,7 +16,9 @@
         <tr>
           <td>{{i.name}}</td>
           <td>{{i.price}}</td>
-          <td><input type="number"/></td>
+          <!--<td><input type="number" value={{i.quantity}} data-value={{i.quantity}}/></td>-->
+          {{input type="number" value=i.quantity}}
+
         </tr>
         {{/each}}
       </tbody>
@@ -25,9 +27,8 @@
   </div>
 
   <footer class="col-md-12 text-right">
-    <label for="total">Total</label>
-    <input type="text" disabled="true"/>
-    <button type="button" class="btn btn-primary">Calculate</button>
+    {{total-label text="Total:" value=total}}
+    <button {{action "calculatePrice"}} type="button" class="btn btn-primary">Calculate</button>
   </footer>
 
 </div>
