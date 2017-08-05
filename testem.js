@@ -8,5 +8,11 @@ module.exports = {
   launch_in_dev: [
     'PhantomJS',
     'Chrome'
-  ]
+  ],
+  "proxies": {
+    "/products|/ingredients": {
+      "port": 8080,
+      "host": "localhost"
+    }
+  }
 };

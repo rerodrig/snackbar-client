@@ -4,11 +4,18 @@ import moduleForAcceptance from 'snackbar-client/tests/helpers/module-for-accept
 moduleForAcceptance('Acceptance | product');
 
 test('visiting /product/list', function(assert) {
-  //visit('/product/list');
+
   visit('/product/list');
 
   andThen(function() {
-    //assert.equal(currentURL(), '/product/list');
+
     assert.equal(currentURL(), '/product/list');
+
+    var title = find('h2');
+    assert.equal(title.text(), 'Products');
+
+    var todos = find('.list-group-item');
+    assert.equal(todos.length, 4);
+
   });
 });
