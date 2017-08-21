@@ -4,7 +4,7 @@ import page from '../pages/price-calculator';
 
 moduleForAcceptance('Acceptance | price calculator');
 
-test('visiting /price-calculator', function(assert) {
+test('visiting the price calculator', function(assert) {
 
   page.visit();
 
@@ -13,5 +13,18 @@ test('visiting /price-calculator', function(assert) {
     assert.equal(page.ingredients().count, 5);
   });
 
+});
+
+test('calculating the product price', async function(assert) {
+
+  await page.visit()
+    .fillInQuantity('Cheese', 6)
+    .fillInQuantity('Burger', 18)
+    .fillInQuantity('Lettuce', 1)
+    .calculate();
+
+  andThen(function() {
+      assert.equal(page.total, "38.16");
+  });
 
 });
