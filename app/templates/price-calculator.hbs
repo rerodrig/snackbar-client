@@ -1,28 +1,25 @@
-<h2>Price Calculator</h2>
+<div style="width: 800px; margin: 0 auto;">
 
-<div class="bs-example" data-example-id="list-group-custom-content">
-  <div class="list-group">
+  <h2>Price Calculator</h2>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <td>Name</td>
-          <td>Price</td>
-          <td>Quantity</td>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each model as |i|}}
-        <tr>
-          <td>{{i.name}}</td>
-          <td>{{i.price}}</td>
-          {{input type="number" value=i.quantity}}
-        </tr>
-        {{/each}}
-      </tbody>
-    </table>
-
-  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |i|}}
+      <tr>
+        <td class="col-md-4">{{i.name}}</td>
+        <td class="col-md-2">{{i.price}}</td>
+        <td class="col-md-2">{{input type="number" value=i.quantity}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
 
   <footer class="col-md-12 text-right">
     {{total-label text="Total:" value=total}}
