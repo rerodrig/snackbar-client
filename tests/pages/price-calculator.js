@@ -21,7 +21,7 @@ export default create({
   calculate: clickable('button'),
   total: text('.label-success'),
   fillInQuantity: function(ingredientName, quantity){
-    fillIn('table tbody td:contains("' + ingredientName + '")~input', quantity);
+    fillIn('table tbody td:contains("' + ingredientName + '")~td:last input', quantity);
     return this;
   }
 });
